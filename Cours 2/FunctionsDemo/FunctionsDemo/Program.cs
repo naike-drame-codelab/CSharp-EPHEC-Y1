@@ -28,10 +28,47 @@ Bye();
 Hello();
 Bye();
 
+Greet("Alice");
+
+CircleArea(2.5);
+
+BusinessCard("Albus", "Dumbledore", "Directeur", "Poudlard");
+
+Average(4.0, 5.5, 6.0);
+
+Console.WriteLine(CreateString('C', 'S', 'h', 'a'));
+
 // --- 3) fonction avec paramètres ---
-string userName = "Alice";
-Greet(userName);
+// paramètres peuvent des valeurs directes, des variables ou des expressions
 static void Greet(string name)
 {
     Console.WriteLine($"Bonjour, {name} !");
+}
+
+static void CircleArea(double radius)
+{
+    double pi = 3.14159;
+    double area = pi * radius * radius;
+    Console.WriteLine($"L'aire du cercle de rayon {radius} est {area}.\n");
+}
+
+static void BusinessCard(string firstName, string lastName, string position, string location)
+{
+    Console.WriteLine("----- Carte de Visite -----");
+    Console.WriteLine($"Nom: {firstName}");
+    Console.WriteLine($"Prénom: {lastName}");
+    Console.WriteLine($"Poste : {position}");
+    Console.WriteLine($"Lieu : {location}");
+    Console.WriteLine("---------------------------\n");
+}
+
+// --- 4) fonction avec valeur de retour ---
+static double Average(double a, double b, double c)
+{
+    return (a + b + c) / 3;
+}
+
+static string CreateString(char a, char b, char c, char d)
+{
+    return $"{a}{b}{c}{d}\n";
 }

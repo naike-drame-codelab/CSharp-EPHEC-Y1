@@ -16,19 +16,20 @@ Console.WriteLine();
 // Série 2: fonctions avec paramètres
 // ==================================
 
-AfficherBonDAchat("Potter", "Harry", 50);
-AfficherBonDAchat("Granger", "Hermione", 100);
+AfficherBonDAchat("Potter", "Harry", "Ron", 50);
+AfficherBonDAchat("Granger", "Hermione", "Dimitri", 100);
 
 string nomDuDirecteur = "Dumbledore";
 string prenomDuDirecteur = "Albus";
+string auteurCadeau = "Severus Rogue";
 int montantCadeauDuDirecteur = 1000;
-AfficherBonDAchat(nomDuDirecteur, prenomDuDirecteur, montantCadeauDuDirecteur);
+AfficherBonDAchat(nomDuDirecteur, prenomDuDirecteur, auteurCadeau, montantCadeauDuDirecteur);
 
 // Série 3: fonctions avec renvoi de valeur
 // =================================
 int montantCadeauRon;
 montantCadeauRon = CalculerMoyenne(50, 100);
-AfficherBonDAchat("Weasley", "Ron", montantCadeauRon);
+AfficherBonDAchat("Weasley", "Ron", "Harry", montantCadeauRon);
 
 Console.WriteLine("Appuyez sur <enter> pour terminer...");
 Console.ReadLine();
@@ -42,12 +43,13 @@ static void DessinerTriangle()
     Console.WriteLine("*****");
 }
 
-static void AfficherBonDAchat(string nom, string prenom, int valeur)
+static void AfficherBonDAchat(string nom, string prenom, string auteur, int valeur)
 // Affiche un bon d'achat établi aux nom et prénom de la personne, pour la valeur donnée
 {
     Console.WriteLine("==========================================");
     Console.WriteLine("Bon d'achat d'une valeur de " + valeur + " euros");
     Console.WriteLine("Etabli au nom de " + prenom + " " + nom);
+    Console.WriteLine("De la part de " + auteur);
     Console.WriteLine("==========================================");
 }
 static int CalculerMoyenne(int nombre1, int nombre2)
