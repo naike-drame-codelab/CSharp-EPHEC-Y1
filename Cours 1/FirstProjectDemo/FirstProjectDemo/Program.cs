@@ -43,3 +43,24 @@ resultat = i+j+s;
 Console.WriteLine(resultat); // 8test car addition des entiers avant concaténation
 resultat = s+i+j;
 Console.WriteLine(resultat); // test35 car concaténation de chaînes de caractères
+
+// type booléen
+bool m = true;
+bool n = false;
+Console.WriteLine("a AND b = " + (m && n)); // false
+Console.WriteLine(!m); // false
+Console.WriteLine(m && false);  // false
+
+// loi de De Morgan
+bool p = true;
+bool q = false;
+bool rLeft = !(p || q);
+bool rRight = (!p && !q);
+bool areEqual = (rLeft == rRight);
+Console.WriteLine("Loi de de Morgan 1 : " + areEqual);
+bool rLeft2 = !(p && q);
+bool rRight2 = !p || !q;
+bool areEqual2 = (rLeft2 == rRight2);
+Console.WriteLine("Loi de de Morgan 2 : " + areEqual2);
+
+// types réels
