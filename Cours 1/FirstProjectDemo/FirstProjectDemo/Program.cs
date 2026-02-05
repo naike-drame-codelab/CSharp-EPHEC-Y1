@@ -64,3 +64,24 @@ bool areEqual2 = (rLeft2 == rRight2);
 Console.WriteLine("Loi de de Morgan 2 : " + areEqual2);
 
 // types réels
+    // float = sur 32bit, 1.4 * 10^-45 à 3.4 * 10^38, précision ~7 chiffres décimaux
+    // double = sur 64bit, 4.9 * 10^-324 à 1.7 * 10^308, précision ~15-16 chiffres décimaux => type PAR DÉFAUT pour les réels
+    // decimal = sur 128bit, 1.0 * 10^-28 à 7.9 * 10^28, précision ~28-29 chiffres décimaux (opérations financières, très lent)
+
+double result = 100.0 / 3; // 33.3333333333333 => type double par défaut, très utile dans les calculs de moyennes
+
+double length = 5.5;
+double width = 2.3;
+Console.WriteLine("Aire du rectangle = " + (length * width));
+double radius = 3.0;
+double pi = 3.14;
+Console.WriteLine("Périmètre du cercle = " + (2 * pi * radius));
+Console.WriteLine("Aire du cercle = " + (pi * radius * radius));
+
+// conversion explicite (casting)
+double originalDouble = 9.78;
+int convertedInt = (int)originalDouble; // 9, la partie décimale est tronquée
+
+// type valeur VS type référence
+    // type valeur : int, byte, bool, float, char, double, decimal, struct, enum
+    // type référence : string, class, array, interface, delegate
