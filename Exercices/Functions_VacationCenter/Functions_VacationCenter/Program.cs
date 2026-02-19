@@ -64,7 +64,7 @@ static void PreparerExcursion() {
     Console.WriteLine("\n------------------------------------------------------------");
 }
 
-// --- OUTIL GÉNÉRIQUE ---
+// --- OUTILS GÉNÉRIQUES ---
 /// <summary>
 /// Lit une entrée clavier et s'assure que c'est un entier valide.
 /// </summary>
