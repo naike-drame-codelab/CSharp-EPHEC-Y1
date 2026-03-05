@@ -3,7 +3,7 @@ CompteurPar2();
 Console.WriteLine();
 
 // while - compteur par 7
-CompteurPar7();
+CompteurParDeuxBis();
 Console.WriteLine();
 
 // while - nombres impairs
@@ -18,14 +18,14 @@ CarreEntier(x);
 static void CompteurPar2()
 {
     int i = 0;
-    while ((i <= 20) && (i*2 <= 20))
+    while (i <= 10)
     {
         Console.WriteLine(i*2);
         i++;
     }
 }
 
-static void CompteurPar7()
+static void CompteurParDeuxBis()
 {
     int i = 0;
     while (i <= 20)
