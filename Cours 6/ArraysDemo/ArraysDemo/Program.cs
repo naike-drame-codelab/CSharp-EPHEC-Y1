@@ -38,9 +38,12 @@ DisplayArray(arr7);
 Console.Write($"Entrez une valeur à rechercher : ");
 int valueToFind = int.Parse(Console.ReadLine());
 int? index = FindValueIndex(arr7, valueToFind);
-if (index.HasValue)
+if (index > -1)
 {
     Console.WriteLine($"La valeur {valueToFind} se trouve à l'index {index}.");
+} else
+{
+    Console.WriteLine($"La valeur {valueToFind} n'a pas été trouvée dans le tableau.");
 }
 
 
