@@ -83,3 +83,9 @@ static void PrintArray(int[] arr)
     }
     Console.WriteLine();
 }
+
+// tour de hanoi : modéliser les données
+// disque = entier représentant la taille du disque
+// pique = liste d'entiers
+// tour : tableau de 3 listes d'entiers représentant les trois piques 
+// !!! ne pas être distrait pour accéder aux éléments des listes de la tour, tour[0][0] = le disque le plus petit sur la première pique, tour[0][1] = le disque suivant, etc.
