@@ -2,11 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net;
-using System.Runtime.ConstrainedExecution;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sudoku
 {
@@ -45,9 +40,7 @@ namespace Sudoku
         static bool ChiffreValide(int i)
         {
             // On vérifie directement si la valeur reçue est dans les bornes du Sudoku (entre 1 et 9 inclus).
-            // Si c'est le cas, on renvoie vrai,
             if ((i >= 1) && (i <= 9)) return true;
-            // sinon on renvoie faux.
             else return false;
         }
 
@@ -59,12 +52,10 @@ namespace Sudoku
             for (int i = 0; i < 9; i++)
             {
                 // La deuxième boucle gère les colonnes d'une même ligne (de gauche à droite)
-
                 for (int j = 0; j < 9; j++)
-                    // Console.Write affiche la case ET un espace à côté, sans passer à la ligne
+                {
                     Console.Write(Tab[i, j] + " ");
-                // Une fois la ligne de 9 chiffres terminée, on force un saut de ligne 
-                // avant de passer à la ligne (i) suivante.
+                }
                 Console.WriteLine();
             }
         }
@@ -142,8 +133,8 @@ namespace Sudoku
                     // On copie la case dans la liste. On obtient 9 éléments au total.
                     L.Add(G[i, j]);
                 }
-
             }
+
             return L;
         }
 
@@ -161,13 +152,10 @@ namespace Sudoku
             return false;
         }
 
-        // Q12 - Ecrivez une fonction ListeCorrecte() qui reçoit une liste de 9 entiers et renvoie une
-        // valeur indiquant si cette liste contient bien tous les entiers de 1 à 9, chacun
-        // apparaissant exactement une fois.Il n’est pas nécessaire de traiter les cas
-        // particuliers tels qu’une liste trop longue ou trop courte.En revanche, la liste pourrait
-        // contenir des chiffres non valides(0, par exemple). 
-        // Astuce : si la liste contient 9 éléments et que chaque chiffre apparaît au moins une
-        // fois, est-il nécessaire de vérifier que certains chiffres n’apparaissent pas en double?
+        // Q12 - Ecrivez une fonction ListeCorrecte() qui reçoit une liste de 9 entiers et renvoie une valeur indiquant si cette liste contient bien tous les entiers de 1 à 9,
+        // chacun apparaissant exactement une fois.Il n’est pas nécessaire de traiter les cas particuliers tels qu’une liste trop longue ou trop courte.
+        // En revanche, la liste pourrait contenir des chiffres non valides(0, par exemple). 
+        // Astuce : si la liste contient 9 éléments et que chaque chiffre apparaît au moins une fois, est-il nécessaire de vérifier que certains chiffres n’apparaissent pas en double?
         static bool ListeCorrecte(List<int> L)
         {
             // On va faire un test pour chaque chiffre qui DOIT être dans un Sudoku (de 1 à 9)
